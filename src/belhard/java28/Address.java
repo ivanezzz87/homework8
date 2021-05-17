@@ -3,9 +3,9 @@ package belhard.java28;
 public class Address {
     private String city;
     private String street;
-    private short house;
+    private Integer house;
 
-    public Address(String city, String street, short house) {
+    public Address(String city, String street, Integer house) {
         this.city = city;
         this.street = street;
         this.house = house;
@@ -19,8 +19,12 @@ public class Address {
         return street;
     }
 
-    public short getHouse() {
+    public Integer getHouse() {
         return house;
     }
 
+    @Override
+    public String toString() {
+        return city + ", " + street + ", " + String.valueOf ( house );
+    }
 }

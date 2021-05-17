@@ -25,6 +25,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Имя: " + this.firstName + " Фамилия: " + this.lastName + "Адрес:" + this.address.toString ();
+        return (address != null) ? "Имя: " + this.firstName + " Фамилия: " + this.lastName + " Адрес: " + this.address.toString () : "Имя: " + this.firstName + " Фамилия: " + this.lastName + " Адрес: null";
     }
 }
