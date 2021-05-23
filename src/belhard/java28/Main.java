@@ -15,7 +15,7 @@ public class Main {
         list.add ( new Person ( null, "Ivanov", new Address ( "Minsk", "Dzerzhinskogo", 120 ) ) );
         list.add ( new Person ( "Nick", null, new Address ( "Vitebsk", "Lenina", 2 ) ) );
         list.add ( new Person ( "Petr", "Andreev", null ));
-        List<Person> modified = list.stream().filter ( person -> person.getFirstName () != null )
+        List<Person> modified = list.stream().filter ( person -> person.getFirstName () != null & person.getLastName () != null & person.getAddress () != null )
                 .sorted (new PersonComparator ())
                 .collect ( Collectors.toList () );
         List<String> stringList = modified.stream().map (  p -> p.toString () ).collect ( Collectors.toList () );
